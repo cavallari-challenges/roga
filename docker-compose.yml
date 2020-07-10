@@ -1,0 +1,29 @@
+version: "3.0"
+services:
+  app:
+    container_name: "app"
+    build: .
+    command: "rails s"
+    volumes:
+      - ".:/app"
+    ports:
+      - "3000:3000"
+    networks:
+      - "internal"
+    links:
+      - "postgres"
+    restart: "always"
+    environment:
+      PORT: 3000
+      DATABASE_HOST: "postgres"
+      BINDING: "0.0.0.0"
+  postgres:
+    image: "postgres:12.3"
+    networks:
+      - "internal"
+    volumes:
+      - ".docker/postgres:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+networks:
+  internal:
