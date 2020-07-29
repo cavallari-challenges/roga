@@ -1,6 +1,7 @@
 version: "3.0"
 services:
   app:
+    tty: true
     container_name: "app"
     build: .
     command: "rails s"
@@ -21,6 +22,8 @@ services:
     image: "postgres:12.3"
     networks:
       - "internal"
+    expose: 
+      - "6379"
     volumes:
       - ".docker/postgres:/var/lib/postgresql/data"
     environment:
