@@ -18,6 +18,7 @@ group :development, :test do
   gem 'pry-byebug',   '3.9.0'
   gem 'pry-rails',    '0.3.9'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :development do
