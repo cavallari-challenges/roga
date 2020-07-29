@@ -11,7 +11,7 @@ class ComplaintsController < ApplicationController
   def show; end
 
   def create
-    @complaint = Complaint.new(complaint_params_create)
+    @complaint = Complaint.new(complaint_params)
     @complaint.user = current_user
     if @complaint.save!
       render json: @complaint
