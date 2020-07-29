@@ -1,0 +1,9 @@
+json.id complaint.id
+json.title complaint.title
+json.description complaint.description
+json.result complaint.result
+json.status complaint.status
+json.user_id complaint.user_id
+json.location_point complaint.location_point
+json.created_at complaint.created_at
+json.updated_at complaint.updated_at
