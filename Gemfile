@@ -10,6 +10,8 @@ gem 'bootsnap',   '>= 1.4.2', require: false
 gem 'devise',     '4.7.2'
 gem 'devise-jwt', '0.7.0'
 gem 'rack-cors',  '1.1.1'
+gem 'kaminari',   '1.2.1'
+gem 'jbuilder',   '2.10.0'
 
 group :development, :test do
   gem 'dotenv-rails', '2.7.5'
